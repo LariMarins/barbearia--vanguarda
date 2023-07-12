@@ -1,9 +1,4 @@
 {
-  "name": "lit-vite-template",
-  "description": "Lit project template using Vite",
-  "version": "1.0.0",
-  "author": "pmattheew",
-  "license": "ISC",
   "scripts": {
     "dev": "vite",
     "build": "vite build"
