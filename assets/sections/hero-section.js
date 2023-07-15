@@ -51,7 +51,9 @@ export class HeroSection extends LitElement {
           <h1>Barbearia <span>Vanguarda</span></h1>
           <app-logo></app-logo>
         </app-titulo>
-        <app-quadro></app-quadro>
+        <app-quadro>
+          <img src="../../public/slider-1.jpg"  alt="imagem slider"/>
+        </app-quadro>
       </section>
       <app-paragrafo>
         Obtenha um estilo impecável, do cabelo à barba.

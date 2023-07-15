@@ -8,8 +8,8 @@ export class Logo extends LitElement {
                 height: 48px;
 
                 background-color: black;
-                -webkit-mask: url('../../imagens/logo.svg') no-repeat center;
-                mask: url('../../imagens/logo.svg') no-repeat center; 
+                -webkit-mask: url('../../public/logo.svg') no-repeat center;
+                mask: url('../../public/logo.svg') no-repeat center; 
 
                 -webkit-mask-size: 100%;
                 mask-size: 100%;
