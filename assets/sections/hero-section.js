@@ -1,20 +1,11 @@
 import { LitElement, html, css } from "lit";
+import { section } from "../styles/sectioon-style";
 
 export class HeroSection extends LitElement {
   static styles = [
+    section,
     css`
-      :host {
-        width: 100%;
-        height: 100%;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 4.375rem;
-      }
-
-      section {
+        section {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -40,6 +31,14 @@ export class HeroSection extends LitElement {
         position: absolute;
         right: -72px;
         top: -39px;
+      }
+      img{
+        height:100%;
+        
+      }
+
+      app-paragrafo{
+         font-size:1.25rem;
       }
     `,
   ];
