@@ -9,7 +9,7 @@ export class Botao extends LitElement {
 
       button {
         display: inline-flex;
-        padding: 10px 24px;
+        padding: 5px 24px;
         border: 0;
         justify-content: center;
         align-items: center;
