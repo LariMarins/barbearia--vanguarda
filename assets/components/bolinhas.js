@@ -4,7 +4,7 @@ export class Bolinhas extends LitElement {
 
   static get properties() {
     return {
-      formarto: { type: String },
+      formato: { type: String },
     };
   }
   
@@ -15,12 +15,16 @@ export class Bolinhas extends LitElement {
         width: 100px;
         height: 100px;
 
+        -webkit-mask-size: 100%;
+        mask-size:100%;
+
+
         display: block;
       }
 
       .inteira {
-        -webkit-mask: url("bolinhas.svg") no-repeat center;
-        mask: url("bolinhas.svg") no-repeat center;
+        -webkit-mask: url("../../public/bolinhas.svg") no-repeat center;
+        mask: url("../../public/") no-repeat center;
       } 
      
       .linha-preenchida {
@@ -39,7 +43,7 @@ export class Bolinhas extends LitElement {
 
         -webkit-mask-size: 100%;
         mask-size: 100%;
-        background-color: black;
+        background-color: var(--cor-bolinha, black)
       }
     `,
   ];
