@@ -5,6 +5,9 @@ export class ServiçOSection extends LitElement {
   static styles = [
     section,
     css`
+      :host {
+        padding: 0;
+      }
       app-bolinhas {
         --cor-bolinha: var(--tom3);
 
@@ -29,7 +32,7 @@ export class ServiçOSection extends LitElement {
         font-weight: 600; /* semibold */
       }
 
-      .titulo{
+      .titulo {
         width: 270px;
       }
 
@@ -59,19 +62,21 @@ export class ServiçOSection extends LitElement {
 
       article app-paragrafo:first-child {
         font-weight: 700;
-        color:var(--tom3);
+        color: var(--tom3);
       }
 
-      .descricao{
-        width:108px;
-        font-size:.875rem;
+      .descricao {
+        width: 108px;
+        font-size: 0.875rem;
       }
 
-      img{
-        height:120%;
+      img {
+        height: 120%;
       }
 
-      app-quadro{
+      app-quadro {
+        width: 298px;
+        height: 364px;
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
       }
@@ -86,7 +91,7 @@ export class ServiçOSection extends LitElement {
 
       <section>
         <app-quadro>
-            <img src="../../public/servicos-1.jpg" alt="imagem 1">
+          <img src="../../public/servicos-1.jpg" alt="imagem 1" />
         </app-quadro>
 
         <aside>
