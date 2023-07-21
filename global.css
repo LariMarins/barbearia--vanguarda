@@ -15,3 +15,7 @@ body{
    
     background-color:  var(--tom1);
 }
+
+.escondido{
+    top: -96px;
+}
