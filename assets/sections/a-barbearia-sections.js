@@ -76,7 +76,7 @@ export class ABarbeariaSections extends LitElement {
       <app-titulo> A Barbearia</app-titulo>
       <app-bolinhas></app-bolinhas>
       <app-quadro>
-        <img src="../../public/a-barbearia.jpg" alt= " a barbearia">
+        <img src="../../public/a-barbearia.jpg" alt= " a-barbearia">
       </app-quadro>
       <article>
         <app-paragrafo>
