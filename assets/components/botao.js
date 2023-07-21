@@ -1,4 +1,5 @@
 import { LitElement, html, css } from "lit";
+import { section } from "../styles/sectioon-style";
 
 export class Botao extends LitElement {
   static styles = [
@@ -7,7 +8,9 @@ export class Botao extends LitElement {
         display: block;
       }
 
-      button {
+      ::slotted(button), 
+      ::slotted(a),
+      button{
         width: inherit;
 
         display: inline-flex;
@@ -19,7 +22,7 @@ export class Botao extends LitElement {
         border-radius: 8px;
         background-color: var(
           --button-background,
-          color-mix(in srgb, white 20%, var(--tom-2, #b38962))
+          color-mix(in srgb, white 20%, var(--tom2, #b38962))
         );
         box-shadow: 0px 2px 4px 0px #665e57;
 
@@ -27,7 +30,7 @@ export class Botao extends LitElement {
 
         color: var(
           --color,
-          color-mix(in srgb, black 20%, var(--tom-3, #664e38))
+          color-mix(in srgb, black 20%, var(--tom3, #664e38))
         );
         text-align: center;
         font-family: var(--fonte-titulo);
@@ -36,32 +39,22 @@ export class Botao extends LitElement {
         font-weight: 700;
         line-height: normal;
         white-space: nowrap;
+        text-decoration: none;
 
         transition: all 0.2ms;
         cursor: pointer;
       }
 
-      button:hover,
-      button:active {
-        background-color: color-mix(
-          in srgb,
-          white 15%,
-          var(--button-background, var(--tom2))
-        );
-        color: var(--tom1);
-      }
+     
 
-      ::slotted(*) {
-        width: 24px;
-        height: 24px;
-        margin: 5px 8px 5px 0;
-      }
     `,
   ];
 
   render() {
     return html`
-      <button><slot name="icone"></slot> <slot> Pressione</slot></button>
+      <slot>
+        <button> pressione</button>
+      </slot>
     `;
   }
 }
