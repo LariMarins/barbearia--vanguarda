@@ -8,12 +8,12 @@ export class Botao extends LitElement {
         display: block;
       }
 
-      ::slotted(button), 
+      ::slotted(button),
       ::slotted(a),
-      button{
+      button {
         width: inherit;
 
-        display: inline-flex;
+        display: flex;
         padding: 5px 24px;
         border: 0;
         justify-content: flex-start;
@@ -45,15 +45,14 @@ export class Botao extends LitElement {
         cursor: pointer;
       }
 
-     
-
+    
     `,
   ];
 
   render() {
     return html`
       <slot>
-        <button> pressione</button>
+        <button>pressione</button>
       </slot>
     `;
   }
