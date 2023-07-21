@@ -35,7 +35,7 @@ export class ContatoSectioon extends LitElement {
         justify-content: center;
         align-items: center;
 
-        margin: 5px, 8px, 5px, 0;
+        margin: 5px 8px 5px 0;
       }
     `,
   ];
