@@ -34,7 +34,6 @@ export class ABarbeariaSections extends LitElement {
       app-paragrafo {
         width: 270px;
 
-        
         text-align: justify;
         line-height: 140%; /* 22.4px */
         letter-spacing: -1.424px;
@@ -56,21 +55,69 @@ export class ABarbeariaSections extends LitElement {
         height: 300px;
         align-items: flex-start;
         gap: 10px;
-       
+
         position: absolute;
         left: -150px;
         top: 72px;
-        z-index:-20;
+        z-index: -20;
 
         --cor-bolinha: var(--tom3);
       }
 
-      img{
-        width:100%;
+      img {
+        width: 100%;
       }
 
-      app-botao{
+      app-botao {
         display: var(--display-botao);
+      }
+
+      @media (min-width: 768px) {
+        app-quadro {
+          width: 600px;
+          height: 600px;
+
+          right: -182px;
+          top: 200px;
+        }
+
+        app-bolinhas {
+          width: 400px;
+          height: 400px;
+
+          left: -20px;
+          top: 350px;
+        }
+
+        app-paragrafo {
+          width: 100%;
+        }
+
+        article {
+          width: 100%;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        app-quadro {
+          width: 600px;
+          height: 600px;
+
+          right: -182px;
+          top: 100px;
+        }
+
+        app-bolinhas {
+          width: 400px;
+          height: 400px;
+
+          left: -20px;
+          top: 112px;
+        }
+
+        article{
+          width:70%;
+        }
       }
     `,
   ];
@@ -80,7 +127,11 @@ export class ABarbeariaSections extends LitElement {
       <app-titulo> A Barbearia</app-titulo>
       <app-bolinhas></app-bolinhas>
       <app-quadro>
-        <img src="../../public/a-barbearia.jpg" alt= " a-barbearia">
+        <img
+          loading="lazy"
+          src="../../public/a-barbearia.jpg"
+          alt="imagem seção a-barbearia"
+        />
       </app-quadro>
       <article>
         <app-paragrafo>

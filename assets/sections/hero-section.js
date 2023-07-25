@@ -5,11 +5,11 @@ export class HeroSection extends LitElement {
   static styles = [
     section,
     css`
-        section {
+      section {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: 1rem;
+        gap: 0.5rem;
       }
       span {
         color: var(--tom3);
@@ -21,24 +21,35 @@ export class HeroSection extends LitElement {
         align-items: center;
         align-self: stretch;
 
-        position:relative;
+        position: relative;
       }
 
       app-logo {
         width: 160px;
         height: 160px;
-      
+
         position: absolute;
         right: -72px;
         top: -39px;
       }
-      img{
-        height:100%;
-        
+      img {
+        height: 100%;
       }
 
-      app-paragrafo{
-         font-size:1.25rem;
+      app-paragrafo {
+        font-size: 1.25rem;
+      }
+
+      @media (min-width: 1024px) {
+        app-paragrafo {
+          display: none;
+        }
+
+        app-logo{
+          width:220px;
+          height:220px;
+          opacity:0.75;
+        }
       }
     `,
   ];
@@ -47,11 +58,18 @@ export class HeroSection extends LitElement {
     return html`
       <section>
         <app-titulo>
-          <h1>Barbearia <span>Vanguarda</span></h1>
+          <h1>
+            Barbearia <br />
+            <span>Vanguarda</span>
+          </h1>
           <app-logo></app-logo>
         </app-titulo>
         <app-quadro>
-          <img src="../../public/slider-1.jpg"  alt="imagem slider"/>
+          <img
+            loading="lazy"
+            src="../../public/slider-1.jpg"
+            alt="imagem slider"
+          />
         </app-quadro>
       </section>
       <app-paragrafo>
