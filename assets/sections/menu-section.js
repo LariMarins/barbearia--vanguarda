@@ -13,17 +13,17 @@ export class MenuSection extends LitElement {
         width: 100%;
         height: 100%;
         max-width: 100%;
-       max-height: 100%;
+        max-height: 100%;
         padding: 32px;
         box-sizing: border-box;
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-start;
         flex-shrink: 0;
-        border:0;
-        margin:0;
+        border: 0;
+        margin: 0;
 
-        opacity:0;
+        opacity: 0;
         pointer-events: none;
         transition: opacity 300ms;
         background-color: rgba(0, 0, 0, 40%);
@@ -31,8 +31,8 @@ export class MenuSection extends LitElement {
         z-index: 110;
       }
 
-      dialog[open]{
-        opacity:1;
+      dialog[open] {
+        opacity: 1;
         pointer-events: auto;
       }
 
@@ -50,7 +50,8 @@ export class MenuSection extends LitElement {
         background-color: white;
       }
 
-      a {
+      a,
+      button {
         /* layout */
         display: flex;
         justify-content: center;
@@ -64,36 +65,56 @@ export class MenuSection extends LitElement {
         font-weight: 500;
         line-height: normal;
         text-decoration: none;
+        cursor: pointer;
+        transition: 300ms;
       }
 
-      button{
-        padding:0;
-        border:0;
-        background:transparent;
+      button {
+        padding: 0;
+        border: 0;
+        background: transparent;
       }
 
       svg,
       feather-icon {
-        display:flex;
+        display: flex;
         width: 24px;
-        fill: white;
-        color: white;
+        fill: currentColor;
       }
+
+      a:hover,
+        button:hover {
+          color: var(--tom1);
+        }
+
+        a:active,
+        button:active {
+          color: var(--cor-primaria);
+        }
     `,
   ];
 
+
+  rolarContato(){
+    return nav.rolarPara('#contato')
+  }
+
+  rolarUnidade(){
+    return nav.rolarPara('#unidade')
+  }
+  
   render() {
     return html`
-      <dialog >
+      <dialog>
         <app-logo></app-logo>
 
         <nav>
-          <a href=""> Unidades <feather-icon icon="map-pin"></feather-icon></a>
-          <a href="">Contato <feather-icon icon="phone"></feather-icon></a>
-          <a href="serviço"
+          <button @click=${this.rolarUnidade}>Unidades <feather-icon icon="map-pin"></feather-icon></button>
+          <button @click=${this.rolarContato}>Contato <feather-icon icon="phone"></feather-icon></button>
+          <a @click=${nav.fechar} href="serviço"
             >Serviços <feather-icon icon="scissors"></feather-icon
           ></a>
-          <a href="a-barbearia"
+          <a @click=${nav.fechar} href="a-barbearia"
             >A Barbearia
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 24">
               <path
@@ -101,8 +122,8 @@ export class MenuSection extends LitElement {
               />
             </svg>
           </a>
-          <a href="/">Home <feather-icon icon="home"></feather-icon></a>
-         
+          <a @click=${nav.fechar} href="/">Home <feather-icon icon="home"></feather-icon></a>
+
           <button @click=${nav.fechar}>
             <feather-icon icon="x"></feather-icon>
           </button>
