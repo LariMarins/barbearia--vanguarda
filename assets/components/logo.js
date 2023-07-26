@@ -15,6 +15,7 @@ export class Logo extends LitElement {
                 mask-size: 100%;
 
                 display: block;
+                opacity: 0.75;
                 
             }
             

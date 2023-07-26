@@ -95,28 +95,29 @@ export class ABarbeariaSections extends LitElement {
 
         article {
           width: 100%;
-        }
-      }
-
-      @media (min-width: 1024px) {
-        app-quadro {
-          width: 600px;
-          height: 600px;
-
-          right: -182px;
-          top: 100px;
+          border-image-source: linear-gradient(
+            30deg,
+            rgba(102, 78, 56, 0) 50%,
+            rgba(102, 78, 56, 1) 100%
+          );
         }
 
-        app-bolinhas {
-          width: 400px;
-          height: 400px;
+        @media (min-width: 1024px) {
+          app-quadro {
+            width: 600px;
+            height: 600px;
 
-          left: -20px;
-          top: 112px;
-        }
+            right: -182px;
+            top: 100px;
+          }
 
-        article{
-          width:70%;
+          app-bolinhas {
+            width: 400px;
+            height: 400px;
+
+            left: -20px;
+            top: 112px;
+          }
         }
       }
     `,

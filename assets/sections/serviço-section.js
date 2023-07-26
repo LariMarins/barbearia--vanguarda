@@ -115,6 +115,12 @@ export class ServiçOSection extends LitElement {
           padding:176px 0 16px 0;
         }
 
+        @media (min-width: 1024px) {
+          div{
+            display:none;
+          }
+      
+        }
       }
     `,
   ];

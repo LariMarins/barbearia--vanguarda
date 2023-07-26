@@ -9,6 +9,11 @@
     --fonte-corpo: 'Source Serif 4', sans-serif;
 }
 
+html{
+    width: 100%;
+    overflow-x: hidden;
+}
+
 body{
     margin: 0 auto;
     width: 100%;
@@ -18,7 +23,7 @@ body{
 }
 
 .escondido{
-    top: -96px;
+    top: -176px;
 }
 
 @media(min-width: 768px) {
