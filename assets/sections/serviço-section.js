@@ -72,14 +72,29 @@ export class ServiçOSection extends LitElement {
       }
 
       img {
-        height: 120%;
+        height: 100%;
+      }
+
+      img:first-child {
+        width: 120%;
       }
 
       app-quadro {
-        width: 298px;
+        width: 165px;
         height: 364px;
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
+      }
+
+      swiper-container {
+        width: 100%;
+        height: 100%;
+      }
+
+      swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
       @media (min-width: 768px) {
@@ -106,20 +121,19 @@ export class ServiçOSection extends LitElement {
           font-size: 1.25rem;
         }
 
-        .descricao{
+        .descricao {
           font-size: 1rem;
           width: 158px;
         }
 
-        aside{
-          padding:176px 0 16px 0;
+        aside {
+          padding: 176px 0 16px 0;
         }
 
         @media (min-width: 1024px) {
-          div{
-            display:none;
+          div {
+            display: none;
           }
-      
         }
       }
     `,
@@ -133,11 +147,36 @@ export class ServiçOSection extends LitElement {
 
       <section>
         <app-quadro>
-          <img
-            loading="lazy"
-            src="../../public/servicos-1.jpg"
-            alt="imagem 1"
-          />
+          <swiper-container
+            effect="fade"
+            simulate-touch="false"
+            autoplay="true"
+            speed="750"
+            loop="true"
+            disabled-on-interaction="false">
+            <swiper-slide>
+              <img
+                class="primeira imagem"
+                loading="lazy"
+                src="../../public/servicos-1.jpg"
+                alt="imagem 1"
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                loading="lazy"
+                src="../../public/servicos-2.jpg"
+                alt="imagem 2"
+              />
+            </swiper-slide>
+            <swiper-slide>
+              <img
+                loading="lazy"
+                src="../../public/servicos-3.jpg"
+                alt="imagem 3"
+              />
+            </swiper-slide>
+          </swiper-container>
         </app-quadro>
 
         <aside>
