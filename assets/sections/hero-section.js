@@ -31,7 +31,7 @@ export class HeroSection extends LitElement {
         position: absolute;
         right: -72px;
         top: -39px;
-        z-index:10;
+        z-index: 10;
       }
       img {
         height: 100%;
@@ -41,9 +41,13 @@ export class HeroSection extends LitElement {
         font-size: 1.25rem;
       }
 
-      swiper-container{
-        width:100%;
-        height:100%;
+      swiper-container {
+        width: 100%;
+        height: 100%;
+      }
+
+      app-quadro {
+        background-color: transparent;
       }
 
       @media (min-width: 768px) {
@@ -60,7 +64,6 @@ export class HeroSection extends LitElement {
         app-logo {
           width: 220px;
           height: 220px;
-          
         }
       }
     `,
@@ -77,7 +80,20 @@ export class HeroSection extends LitElement {
           <app-logo></app-logo>
         </app-titulo>
         <app-quadro>
-          <swiper-container loop="true" autoplay="true">
+          <swiper-container
+            loop="true"
+            autoplay="true"
+            speed="5000"
+            disabled-on-interaction="false"
+            effect="coverflow"
+            simulate-touch="false"
+            centered-slides="true"
+            coverflow-effect-rotate="50"
+            coverflow-effect-stretch="0"
+            coverflow-effect-depth="100"
+            coverflow-effect-modifier="1"
+            coverflow-effect-slide-shadows="true"
+          >
             <swiper-slide>
               <img
                 loading="lazy"
@@ -101,7 +117,6 @@ export class HeroSection extends LitElement {
                 alt="imagem slider 3"
               />
             </swiper-slide>
-
           </swiper-container>
         </app-quadro>
       </section>

@@ -30,7 +30,8 @@ export class ContatoSectioon extends LitElement {
         --color: color-mix(in srgb, white 40%, var(--tom1));
       }
 
-      feather-icon, svg {
+      feather-icon,
+      svg {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -38,31 +39,32 @@ export class ContatoSectioon extends LitElement {
         margin: 5px 8px 5px 0;
       }
 
-      @media(min-width: 768px){
-        div{
+      @media (min-width: 768px) {
+        div {
           flex-direction: row;
         }
       }
 
-      @media(min-width: 1024px){
-       div{
-        max-width: 80%;
-       }
+      @media (min-width: 1024px) {
+        div {
+          max-width: 80%;
+        }
 
-       app-quadro{
-        width:70vw;
-       }
+        app-quadro {
+          width: 70vw;
+        }
       }
     `,
   ];
 
   mensagemWhatsapp() {
-    const mensagem= " Olá! Eu olhei o site da Barbearia e gostaria de conhecer"
-    return encodeURIComponent(mensagem)
+    const mensagem =
+      " Olá! Eu olhei o site da Barbearia e gostaria de conhecer";
+    return encodeURIComponent(mensagem);
   }
 
   render() {
-    const numeroWhatsapp ="5511911165221"
+    const numeroWhatsapp = "5511911165221";
     return html`
       <app-titulo> Entre em contato conosco</app-titulo>
 
@@ -78,7 +80,9 @@ export class ContatoSectioon extends LitElement {
         </app-botao>
 
         <app-botao class="whatsapp">
-          <a href=${`https://wa.me/${numeroWhatsapp}?text=${this.mensagemWhatsapp()}`}>
+          <a
+            href=${`https://wa.me/${numeroWhatsapp}?text=${this.mensagemWhatsapp()}`}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
