@@ -30,20 +30,24 @@ export class UnidadeSections extends LitElement {
         z-index: -10;
       }
 
-      swiper-container{
-        width:100%;
-        height:300px;
+      swiper-container {
+        width: 100svw;
+        height: 300px;
+
+        position: relative;
+        left:50%;
+        transform: translateX(-50%);
       }
-      swiper-slide{
-        padding:1rem;
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        transition:transform 500ms;
+      swiper-slide {
+        padding-top: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform 500ms;
       }
 
-      .swiper-slide-active{
-        transform: scale(1.1)
+      .swiper-slide-active {
+        transform: scale(1.1);
       }
       @media (min-width: 768px) {
         app-paragrafo {
@@ -56,9 +60,38 @@ export class UnidadeSections extends LitElement {
           width: 400px;
           height: 300px;
         }
+        swiper-container{
+          height:500px;
+        }
       }
     `,
   ];
+
+  firstUpdated() {
+    const swiper = this.renderRoot.querySelector('swiper-container')
+
+    console.log(swiper)
+
+    Object.assign(swiper, {
+      spaceBetween: -75, 
+      initialSlide: 1,
+      rewind: true,
+      breakpoints: {
+        768: {
+          spaceBetween: -275,
+        },
+        1024: {
+          spaceBetween: -575,
+        },
+        1368: {
+          slidesPerView: 3,
+          spaceBetween: 0,
+        },
+      }
+    })
+
+    swiper.initialize()
+  }
 
   render() {
     return html`
@@ -67,26 +100,50 @@ export class UnidadeSections extends LitElement {
         estão abertas todos os dias. <br /><br />
         Confira os horários específicos de cada unidade.
       </app-paragrafo>
-
-      <swiper-container space between= "75">
+     
+      <swiper-container init="false">
         <swiper-slide>
           <app-mapa> </app-mapa>
         </swiper-slide>
-
         <swiper-slide>
-          <app-mapa> </app-mapa>
+          <app-mapa>
+            <img
+              slot="imagem"
+              loading="lazy"
+              src="../../public/mapa-2.jpg"
+              alt="imagem local da barbearia"
+            />
+          </app-mapa>
         </swiper-slide>
-
         <swiper-slide>
-          <app-mapa> </app-mapa>
+          <app-mapa>
+            <img
+              slot="imagem"
+              loading="lazy"
+              src="../../public/mapa-3.jpg"
+              alt="imagem local da barbearia"
+            />
+          </app-mapa>
         </swiper-slide>
-
         <swiper-slide>
-          <app-mapa> </app-mapa>
+          <app-mapa>
+            <img
+              slot="imagem"
+              loading="lazy"
+              src="../../public/mapa-4.jpg"
+              alt="imagem local da barbearia"
+            />
+          </app-mapa>
         </swiper-slide>
-
         <swiper-slide>
-          <app-mapa> </app-mapa>
+          <app-mapa>
+            <img
+              slot="imagem"
+              loading="lazy"
+              src=""
+              alt="imagem local da barbearia"
+            />
+          </app-mapa>
         </swiper-slide>
       </swiper-container>
 
