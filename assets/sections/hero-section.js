@@ -96,7 +96,6 @@ export class HeroSection extends LitElement {
           >
             <swiper-slide>
               <img
-                loading="lazy"
                 src="slider-1.jpg"
                 alt="imagem slider 1"
               />
@@ -104,7 +103,6 @@ export class HeroSection extends LitElement {
 
             <swiper-slide>
               <img
-                loading="lazy"
                 src="slider-2.jpg"
                 alt="imagem slider 2"
               />
@@ -112,9 +110,9 @@ export class HeroSection extends LitElement {
 
             <swiper-slide>
               <img
-                loading="lazy"
+              
                 src="slider-3.jpg"
-                alt="imagem slider 3"
+                alt="imagem slider3"
               />
             </swiper-slide>
           </swiper-container>

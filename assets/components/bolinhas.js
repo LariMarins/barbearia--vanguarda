@@ -23,22 +23,22 @@ export class Bolinhas extends LitElement {
       }
 
       .inteira {
-        -webkit-mask: url("../../public/bolinhas.svg") no-repeat center;
-        mask: url("../../public/") no-repeat center;
+        -webkit-mask: url("bolinhas.svg") no-repeat center;
+        mask: url("bolinha.svg") no-repeat center;
       } 
      
       .linha-preenchida {
-        -webkit-mask: url("../../public/linha preenchida.svg") no-repeat center;
-        mask: url("../../public/linha preenchida.svg") no-repeat center;
+        -webkit-mask: url("linha preenchida.svg") no-repeat center;
+        mask: url("linha preenchida.svg") no-repeat center;
       }
       
       .linha-vazada {
-        -webkit-mask: url("../../public/linha vazada.svg") no-repeat center;
-        mask: url("../../public/linha vazada.svg") no-repeat center;
+        -webkit-mask: url("linha vazada.svg") no-repeat center;
+        mask: url("linha vazada.svg") no-repeat center;
       }
         .metade {
-        -webkit-mask: url("../../public/bolinhas-metade.svg") no-repeat center;
-        mask: url("../../public/bolinhas-metade.svg") no-repeat center;
+        -webkit-mask: url("/bolinhas-metade.svg") no-repeat center;
+        mask: url("bolinhas-metade.svg") no-repeat center;
       }
 
       .bolinhas {

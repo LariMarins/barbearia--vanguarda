@@ -10,7 +10,7 @@ export class ContatoSectioon extends LitElement {
         gap: 0;
       }
 
-      img {
+      video {
         height: 100%;
       }
 
@@ -69,7 +69,13 @@ export class ContatoSectioon extends LitElement {
       <app-titulo> Entre em contato conosco</app-titulo>
 
       <app-quadro>
-        <img loading="lazy" src="thumb-contato.png" alt="contato-thumb" />
+        <video
+          data-src="video-contato.webm"
+          poster="thumb-contato.webp"
+          autoplay
+          muted
+          loop
+        ></video>
       </app-quadro>
 
       <div>

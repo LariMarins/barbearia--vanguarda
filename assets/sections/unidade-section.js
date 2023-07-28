@@ -70,7 +70,7 @@ export class UnidadeSections extends LitElement {
   firstUpdated() {
     const swiper = this.renderRoot.querySelector('swiper-container')
 
-    console.log(swiper)
+    
 
     Object.assign(swiper, {
       spaceBetween: -75, 

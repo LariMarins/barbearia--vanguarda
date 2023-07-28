@@ -10,6 +10,18 @@ let router;
 document.addEventListener("DOMContentLoaded", function () {
   router = initRouter();
 
+  router.ready.then(() => {
+    const video = document
+    .querySelector("home-page")
+    .shadowRoot.querySelector("contato-section")
+    .shadowRoot.querySelector("video");
+
+    console.log(video)
+
+    const observer = lozad(video);
+    observer.observe();
+  });
+
   navbar = document.querySelector("app-navbar");
 
   dialog = document
