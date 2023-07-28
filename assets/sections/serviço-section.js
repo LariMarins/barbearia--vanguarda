@@ -158,21 +158,21 @@ export class ServiçOSection extends LitElement {
               <img
                 class="primeira imagem"
                 loading="lazy"
-                src="../../public/servicos-1.jpg"
+                src="servicos-1.jpg"
                 alt="imagem 1"
               />
             </swiper-slide>
             <swiper-slide>
               <img
                 loading="lazy"
-                src="../../public/servicos-2.jpg"
+                src="servicos-2.jpg"
                 alt="imagem 2"
               />
             </swiper-slide>
             <swiper-slide>
               <img
                 loading="lazy"
-                src="../../public/servicos-3.jpg"
+                src="servicos-3.jpg"
                 alt="imagem 3"
               />
             </swiper-slide>

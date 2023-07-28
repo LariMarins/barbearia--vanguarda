@@ -110,7 +110,7 @@ export class UnidadeSections extends LitElement {
             <img
               slot="imagem"
               loading="lazy"
-              src="../../public/mapa-2.jpg"
+              src="mapa-2.jpg"
               alt="imagem local da barbearia"
             />
           </app-mapa>
@@ -120,7 +120,7 @@ export class UnidadeSections extends LitElement {
             <img
               slot="imagem"
               loading="lazy"
-              src="../../public/mapa-3.jpg"
+              src="mapa-3.jpg"
               alt="imagem local da barbearia"
             />
           </app-mapa>
@@ -130,7 +130,7 @@ export class UnidadeSections extends LitElement {
             <img
               slot="imagem"
               loading="lazy"
-              src="../../public/mapa-4.jpg"
+              src="mapa-4.jpg"
               alt="imagem local da barbearia"
             />
           </app-mapa>

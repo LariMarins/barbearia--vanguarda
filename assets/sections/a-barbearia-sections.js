@@ -130,7 +130,7 @@ export class ABarbeariaSections extends LitElement {
       <app-quadro>
         <img
           loading="lazy"
-          src="../../public/a-barbearia.jpg"
+          src="a-barbearia.jpg"
           alt="imagem seção a-barbearia"
         />
       </app-quadro>
