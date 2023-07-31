@@ -1,9 +1,12 @@
 import { LitElement, html, css } from "lit";
+import { animate } from "../styles/animate-style";
 import { section } from "../styles/sectioon-style";
+
 
 export class ContatoSectioon extends LitElement {
   static styles = [
     section,
+    animate,
     css`
       :host {
         justify-content: space-between;
@@ -39,6 +42,10 @@ export class ContatoSectioon extends LitElement {
         margin: 5px 8px 5px 0;
       }
 
+      app-quadro{
+        z-index:10;
+      }
+
       @media (min-width: 768px) {
         div {
           flex-direction: row;
@@ -66,7 +73,7 @@ export class ContatoSectioon extends LitElement {
   render() {
     const numeroWhatsapp = "5511911165221";
     return html`
-      <app-titulo> Entre em contato conosco</app-titulo>
+      <app-titulo class="animate__animated  animate__delay-1s" data-toggle-class="animate__fadeInUp"> Entre em contato conosco</app-titulo>
 
       <app-quadro>
         <video
@@ -78,7 +85,7 @@ export class ContatoSectioon extends LitElement {
         ></video>
       </app-quadro>
 
-      <div>
+      <div  class="animate__animated animate__delay-1s" data-toggle-class="animate__fadeIn">
         <app-botao>
           <a href="mailto:contato@barbeariavanguarda.com.br">
             <feather-icon icon="mail"></feather-icon> Nos envie um email

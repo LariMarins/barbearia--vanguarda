@@ -52,6 +52,8 @@ export class ServiçOSection extends LitElement {
         justify-content: space-between;
         align-items: center;
         align-self: stretch;
+
+        z-index:-10;
       }
 
       article {
@@ -143,12 +145,12 @@ export class ServiçOSection extends LitElement {
 
   render() {
     return html`
-      <app-paragrafo class="titulo animate__animated" data-toggle-class="animate__fadeIn">
+      <app-paragrafo class="titulo animate__animated animate__delay-1s" data-toggle-class="animate__fadeIn">
         Estilo, cuidado e excelência em cada <span>corte</span>
       </app-paragrafo>
 
       <section>
-        <app-quadro>
+        <app-quadro class="animate__animated" data-toggle-class="animate__fadeInLeft">
           <swiper-container
             effect="fade"
             simulate-touch="false"
@@ -181,7 +183,7 @@ export class ServiçOSection extends LitElement {
           </swiper-container>
         </app-quadro>
 
-        <aside>
+        <aside class="animate__animated animate__delay-1s" data-toggle-class="animate__fadeInLeft">
           <article>
             <app-paragrafo>Corte</app-paragrafo>
             <app-paragrafo class="descricao"

@@ -1,17 +1,27 @@
 import { LitElement, html, css } from "lit";
+import { animate } from "../styles/animate-style";
 import { section } from "../styles/sectioon-style";
 
 export class HeroSection extends LitElement {
   static styles = [
     section,
+    animate,
     css`
+        :host{
+          --animate-delay: 0.3s;
+        }
+      
       section {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         gap: 0.5rem;
       }
+
       span {
+        display: inline-block;
+      }
+      .vanguarda {
         color: var(--tom3);
         font-weight: 900;
       }
@@ -50,6 +60,17 @@ export class HeroSection extends LitElement {
         background-color: transparent;
       }
 
+      @keyframes slideInUp {
+        0% {
+          transform: translate3d(0px, 200%, 0px);
+          visibility: visible;
+        }
+
+        100%{
+          transform:translateZ(0px);
+        }
+      }
+
       @media (min-width: 768px) {
         app-logo {
           width: 220px;
@@ -74,8 +95,17 @@ export class HeroSection extends LitElement {
       <section>
         <app-titulo>
           <h1>
-            Barbearia <br />
-            <span>Vanguarda</span>
+            <span
+              class="animate__animated animate__fast__animated"
+              data-toggle-class="animate__slideInUp"
+              >Barbearia</span
+            >
+            <br />
+            <span
+              class="vanguarda animate__animated animate__fast__animated__delay-1s"
+              data-toggle-class="animate__slideInUp"
+              >Vanguarda</span
+            >
           </h1>
           <app-logo></app-logo>
         </app-titulo>
@@ -95,30 +125,20 @@ export class HeroSection extends LitElement {
             coverflow-effect-slide-shadows="true"
           >
             <swiper-slide>
-              <img
-                src="slider-1.jpg"
-                alt="imagem slider 1"
-              />
+              <img src="slider-1.jpg" alt="imagem slider 1" />
             </swiper-slide>
 
             <swiper-slide>
-              <img
-                src="slider-2.jpg"
-                alt="imagem slider 2"
-              />
+              <img src="slider-2.jpg" alt="imagem slider 2" />
             </swiper-slide>
 
             <swiper-slide>
-              <img
-              
-                src="slider-3.jpg"
-                alt="imagem slider3"
-              />
+              <img src="slider-3.jpg" alt="imagem slider3" />
             </swiper-slide>
           </swiper-container>
         </app-quadro>
       </section>
-      <app-paragrafo>
+      <app-paragrafo class="animate__animated animate__delay-5s" data-toggle-class="animate__fadeIn">
         Obtenha um estilo impecável, do cabelo à barba.
       </app-paragrafo>
     `;
