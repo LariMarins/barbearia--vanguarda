@@ -1,9 +1,11 @@
 import { LitElement, html, css } from "lit";
+import { animate } from "../styles/animate-style";
 import { section } from "../styles/sectioon-style";
 
 export class ServiçOSection extends LitElement {
   static styles = [
     section,
+    animate,
     css`
       :host {
         padding: 0;
@@ -141,7 +143,7 @@ export class ServiçOSection extends LitElement {
 
   render() {
     return html`
-      <app-paragrafo class="titulo">
+      <app-paragrafo class="titulo animate__animated" data-toggle-class="animate__fadeIn">
         Estilo, cuidado e excelência em cada <span>corte</span>
       </app-paragrafo>
 
